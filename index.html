@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja ursinhos carinhosos - Pedido</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/159e43023c.js" crossorigin="anonymous"></script>
+   
+
+</head>
+
+<body onload="carregarPagina()">
+    <header>
+        <nav class="navbar navbar-expand navbar-ligth">
+            <div class="container-fluid d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class="img-logo"><img class="logo-nav" src="devinhouse-logo.png" alt="Logo Devinhouse"></div>
+                <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none h2">Ursos_Carinhosos_Loja.com
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        
+                        <li><a class="nav-link text-white active " style="font-weight: bold;" href="#">Tema</a></li>
+                    </ul>
+                <label for="switch"></label>
+                <input type="checkbox" id="switch">Dark Mode
+                </div>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <label for="search" class="search"><i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="search" class="input-search" placeholder="Procurar..."></label>
+                </form>
+
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+        <div class="row">
+            <section class="col-12 col-md-4">
+                <h3 class="display-6 text-success">Ursinhos Carinhosos</h3>
+                <img class="img-fluid mb-5" src="logo ursinhos.gif" alt="Logo Loja Ursinhos">
+
+            </section>
+            <section class="col-12 col-md-8">
+                <form class="form" id="form">
+                    <label for="list-item">Insira um ursinho na lista da Fantasia</label>
+                    <div class="menu">
+                        <input class="input-item" type="text" name="list-item" id="list-item" placeholder="Ex.: Urso 01 (não pode inserir valor nulo)">
+                        <button class="btn-insert" id="btn" type="submit" onclick="adicionaItem()"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                    </div>
+                </form>
+                <div class="resultado">
+                    <div class="lista">
+                        <ul class="item form-check form-switch" id="lista">
+                            
+                        </ul>
+                    </div>
+                    <div class="total">
+                        <h2>Total do valor de suas compras:</h2>
+                        <h3 class="valor" id="total">R$ 0,00</h3>
+                    </div>
+                </div>
+                <div class="content-btn">
+                    <button class="btn-limpar" onclick="limparLocalStorage()">Limpar Carrinho</button>
+                </div>
+            </section>
+        </div>
+  
+        <!-- Início Modal -->
+        <div class="modal fadein" id="exampleModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-light">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Valor R$ <span id="itemPreco"></span></h3>
+                    </div>
+                    <div class="modal-body">
+                        <input type="number" id="valor" placeholder="Ex. 0,01" class="input-item">
+                    </div>
+                    <div class="modal-btn-valor">
+                        <button type="button" class="btn-valor" id="btn-valor" onclick="insereValor()" >Inserir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Início Modal -->
+
+    </main>
+
+   <!--Redes sociais de contato--> 
+    <footer class="footer">
+        <p class="text-white">Desenvolvido por Valeria Guevara | DEVinHouse_Loja</p>
+        <div class="redes">
+            <ul>
+                <li><a href="https://www.instagram.com/valeriaalexandra1901/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/valeria-alexandra-guevara-parra-1498551a4/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://mail.google.com/mail/u/0/?ogbl#inbox"><i class="far fa-envelope"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
